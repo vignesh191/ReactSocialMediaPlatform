@@ -1,0 +1,201 @@
+.profile_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.profile_avatar {
+    margin-right: 10px
+
+}
+
+.profile_name {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 10px
+}
+
+.profile {
+    margin: 0 auto;
+    max-width: 750px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.profile_t1 {
+    padding: 5px;
+    margin-right: 525px
+}
+
+.profile_t2 {
+    padding: 5px;
+    margin-right: 375px
+}
+
+.profile_divider {
+
+}
+
+.searchbar-2 {
+    margin-top: -20px;
+}
+
+.profile_bio_title {
+    text-align: left;
+}
+
+.profile_bio {
+    text-align: left;
+}
+
+.edit_btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.login_check {
+    position: sticky;
+    top: 56px;
+    z-index: 1;
+}
+
+.bio_edit {
+    width: 300%;
+}
+
+.num_followers {
+    text-align: left;
+}
+
+.null_clips {
+    margin-left: 40%
+}
+
+
+.flex-container {
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px black solid;
+    margin: 0 auto;
+}
+
+
+
+.profile_card {
+    width: 20%;
+    float: left;
+    position: fixed;
+    left: 10%
+
+}
+
+.your_postList {
+    width: 50%;
+    float: left;
+    margin-left: 24%;
+    margin-top: 0.5%
+    /*border: 4px dotted blue;*/
+}
+
+.social_search {
+    width: 20%;
+    float: left;
+    margin-top: 16px;
+    position: fixed;
+    right: 10%;
+}
+
+.prof_results {
+  margin-left: 0px;
+  overflow-y: scroll
+
+}
+
+.prof_search {
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    padding-bottom: 20px;
+}
+
+
+.prof_search_result {
+     margin-left: -50px;
+     text-align: left;
+}
+
+.profile_tag {
+    text-align: left
+}
+
+.connect_tag {
+    text-align: left
+}
+
+.profsearch_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profsearch_name {
+    margin-right: 10px;
+    color: black
+}
+
+.profsearch_numfollowers {
+    color: black
+}
+
+.follow_btn {
+}
+
+.profile_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profilecard_name {
+    margin-right: 2%
+}
+
+
+.title {
+    position: fixed;
+    top: 47px;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 0.5%;
+    padding-bottom: 15px
+}
+
+.profile_content {
+    margin-top: 4%;
+}
+
+.login_check {
+    position: sticky;
+    margin-top: 47px;
+    top: 47px;
+    z-index: 10;
+    width: 100%;
+}
+
+.composite_prof_search_list {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.prof_search_null_result {
+    margin-left: -30px;
+}

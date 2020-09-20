@@ -1,0 +1,10 @@
+.nav_main {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%
+}
+
+.navbar_searchbar {
+    margin-right: 30px;
+}

@@ -1,0 +1,127 @@
+.post {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    max-width: 500px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+.comment_wrap {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment_field {
+    width: 100%
+}
+
+.post_title {
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: -50px
+}
+
+.post_text {
+    font-weight: 500;
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: -5px
+}
+
+.post_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post_avatar {
+    margin-right: 10px
+
+}
+
+.like_btn {
+    position: absolute;
+    left: 20px;
+}
+
+.share_btn {
+    position: absolute;
+    left: 145px;
+
+}
+
+.post_image {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.post_video {
+    max-width:100%;
+    max-height:100%;
+    margin-bottom: 5px;
+}
+
+.post_comment_element {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.delete_btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.post_comments_list {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.profile_link {
+    text-decoration: none !important;
+    color: black;
+    margin-right: 2%
+}
+
+.post_btns {
+    padding-left: 10px;
+    float: left;
+    position: absolute
+}
+
+.share_modal {
+    height: auto;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+}
+
+.post_body {
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.pic_button {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.post_modal {
+    padding: 0px !important;
+    margin: 0px !important;
+}
