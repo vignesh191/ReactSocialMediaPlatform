@@ -11,15 +11,14 @@ function CreatePostForm (props) {
     const [caption, setCaption] = useState('');
     const [title, setTitle] = useState('')
     const [progress, setProgress] = useState(0);
-    const[currUser, setCurrUser] = useState(null);
+    const [currUser, setCurrUser] = useState(null);
 
 
-    //a change in authorization
+    // to identify a change in authorization
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((authUser) => {
             if (authUser) {
                 //user has logged in i.e. there is an authUser
-                console.log(authUser);
                 setCurrUser(authUser);
 
             } else {
@@ -33,14 +32,17 @@ function CreatePostForm (props) {
         }
     }, []);
 
-    function handleFileChange(e) {
+    // sets user inputted file to state
+    function handleFileChange(e) { 
         if(e.target.files[0]) {
             setImageFile(e.target.files[0]);
         }
 
     };
-
-    function handleSubmit(e) {
+    
+    
+    // uploads content to firebase storage
+    function handleSubmit(e) { 
         e.preventDefault()
         const fileName = imageFile?.name;
         const uploadTask = storage.ref().child('images/' + fileName).put(imageFile);
@@ -65,10 +67,9 @@ function CreatePostForm (props) {
                 storage
                     .ref('images')
                     .child(imageFile.name)
-                    .getDownloadURL() //get download link
+                    .getDownloadURL() //get download link to display post
                     .then(url => {
                         //put image and details in db
-                        console.log(url);
                         db.collection("posts").add({
                             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                             authorId: currUser.uid,
@@ -89,7 +90,8 @@ function CreatePostForm (props) {
         );
     };
 
-    return (
+
+return (
 <Accordion defaultActiveKey="1">
   <Card>
     <Card.Header>
@@ -99,32 +101,30 @@ function CreatePostForm (props) {
     </Card.Header>
     <Accordion.Collapse eventKey="0">
       <Card.Body>
-             <div class="row justify-content-center" id="postForm">
-             <Form>
-             <Form.File label=<h4>Clip file:</h4>
-                onChange={handleFileChange}
-              />
-              <ProgressBar animated now={progress} max="100"/>
-             <hr/>
-             <h4>Clip details:</h4>
-             <Form.Control type="text" placeholder="Title..." value={title}
-                onChange={e => setTitle(e.target.value)}
-              />
-             <Form.Control type="text" placeholder="Description..." value={caption}
-                onChange={e => setCaption(e.target.value)}
-              />
-             <hr />
-             <Button color='green' type="post" onClick={handleSubmit}>
-             <Icon name='check circle outline'/>
-             Post</Button>
-        </Form>
+         <div class="row justify-content-center" id="postForm">
+            <Form>
+                <Form.File label=<h4>Clip file:</h4>
+                    onChange={handleFileChange}
+                />
+                <ProgressBar animated now={progress} max="100"/>
+                <hr/>
+                <h4>Clip details:</h4>
+                <Form.Control type="text" placeholder="Title..." value={title}
+                    onChange={e => setTitle(e.target.value)}
+                />
+                <Form.Control type="text" placeholder="Description..." value={caption}
+                    onChange={e => setCaption(e.target.value)}
+                />
+                <hr />
+                <Button color='green' type="post" onClick={handleSubmit}>
+                <Icon name='check circle outline'/>
+                 Post</Button>
+            </Form>
         </div>
-
       </Card.Body>
     </Accordion.Collapse>
-  </Card>
-</Accordion>
-    )
+</Card>
+</Accordion>)
 }
 
-export default CreatePostForm
+export default CreatePostForm;
