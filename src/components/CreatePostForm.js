@@ -43,7 +43,8 @@ function CreatePostForm (props) {
     
     // uploads content to firebase storage
     function handleSubmit(e) { 
-        e.preventDefault()
+        e.preventDefault() //default action of submitting form is prevented
+        
         const fileName = imageFile?.name;
         const uploadTask = storage.ref().child('images/' + fileName).put(imageFile);
 
