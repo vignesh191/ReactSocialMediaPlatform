@@ -123,7 +123,7 @@ return (
         </div>
       </Card.Body>
     </Accordion.Collapse>
-</Card>
+   </Card>
 </Accordion>)
 }
 
