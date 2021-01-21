@@ -29,7 +29,7 @@ function CreatePostForm (props) {
         return () => {
             // perform cleanup actions: action will be subscribing
             // until a response comes which can lead to a huge bottleneck or memory leaks
-            unsubscribe(); // this function will execute when the component gets disassociated
+            unsubscribe();
         }
     }, []);
 
