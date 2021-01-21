@@ -27,7 +27,8 @@ function CreatePostForm (props) {
             }
         })
         return () => {
-            //perform cleanup actions
+            // perform cleanup actions: action will be subscribing
+            // until a response comes which can lead to a huge bottleneck or memory leaks
             unsubscribe();
         }
     }, []);
